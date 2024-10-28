@@ -1,0 +1,1555 @@
+/* 
+************************************************************
+google fonts CDN 
+************************************************************
+*/
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+/* 
+************************************************************
+Default CSS
+************************************************************
+*/
+:root {
+    --primary: #;
+    --secondary: #fa5e07;
+    /* --secondary: #0076ff; */
+    --dark: #121212;
+    --gray: #f8f8f8;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--bs-white);
+    background: var(--secondary);
+}
+
+::selection {
+    color: var(--bs-white);
+    background: var(--secondary);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Unbounded", system-ui;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+/* 
+************************************************************
+floating_btn Whatsapp CSS
+************************************************************
+*/
+
+.floating_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+}
+
+.contact_icon {
+    background-color: #42db87;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #42db87;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+}
+
+
+.text_icon {
+    margin-top: 8px;
+    color: #707070;
+    font-size: 13px;
+}
+
+
+
+/* 
+************************************************************
+Header CSS
+************************************************************
+*/
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background: rgba(255, 255, 255, .9);
+}
+
+.header .nav-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header .nav-item .nav-link {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--dark);
+    transition: .3s;
+}
+
+.header .nav-item:hover>.nav-link {
+    color: var(--secondary);
+}
+
+.header .nav-item .nav-link.active {
+    color: var(--secondary);
+}
+
+/* 
+************************************************************
+hero CSS
+************************************************************
+*/
+.hero_section {
+    width: 100%;
+    height: 100vh;
+}
+
+.single_slider {
+    position: relative;
+    z-index: 1;
+}
+
+.hero_img {
+    width: 100%;
+    height: 100vh;
+}
+
+.hero_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    isolation: isolate;
+}
+
+
+
+.hero_content h1 {
+    color: var(--bs-white);
+    transition: 1.3s;
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.owl-item.active .hero_content h1 {
+    color: var(--bs-white);
+    transition: 1.5s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.banner_btn button {
+    border: 0;
+    padding: 15px 30px;
+    line-height: 1;
+    transition: .3s;
+}
+
+.banner_btn button:hover {
+    background: var(--secondary);
+    color: var(--bs-white);
+}
+
+.banner_footer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 35px;
+    transition: 1.5s;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.owl-item.active .banner_footer {
+    transition: 1.5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.banner_btn button ion-icon {
+    transform: rotate(-45deg);
+    transition: .3s;
+}
+
+.banner_btn button:hover ion-icon {
+    transform: rotate(0);
+}
+
+.cta a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta a .icon {
+    background: var(--secondary);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    font-size: 20px;
+    color: var(--bs-white);
+}
+
+.cta a span {
+    color: var(--bs-white);
+}
+
+.hero_slider .owl-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 9%;
+    display: flex;
+    gap: 8px;
+}
+
+.hero_slider .owl-dots .owl-dot {
+    background: #fff;
+    width: 60px;
+    height: 5px;
+    transition: .3s;
+}
+
+.hero_slider .owl-dots .owl-dot.active {
+    background: var(--secondary);
+}
+
+.banner_right {
+    background: rgb(255 255 255 / 68%);
+    padding: 30px;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.banner_right a {
+    background: #fa5e07cf;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.banner_heading h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+/*
+*********************************************
+Banner Service CSS
+*********************************************
+ */
+
+.banner_service {
+    position: relative;
+    top: -60px;
+    z-index: 3;
+}
+
+.banner_service .card {
+    height: 200px;
+    background: #007cea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_service .card h3 {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+/* 
+************************************************************
+About  CSS
+************************************************************
+*/
+.about_section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about_section::before {
+    content: "";
+    background: url(../images/about_img2.png);
+    width: 30%;
+    height: 174px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .5;
+}
+
+.about_section::after {
+    content: "";
+    background: var(--gray);
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.about_wrap {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 50px;
+}
+
+.about_info {
+    position: relative;
+    isolation: isolate;
+}
+
+.about_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sub_holder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.dot {
+    background: var(--secondary);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+hr {
+    margin: 30px 0 50px;
+}
+
+
+.sub_heading span {
+    text-transform: uppercase;
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+
+.custom_btn a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom_btn a span {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.custom_btn a:hover span {
+    color: var(--secondary);
+}
+
+.custom_btn a .icon {
+    width: 30px;
+    height: 30px;
+    background: var(--dark);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    transition: .3s;
+    transform: rotate(-50deg);
+}
+
+.custom_btn a:hover .icon {
+    transform: rotate(0);
+    background: var(--secondary)
+}
+
+
+/*
+**********************************************
+Our Service CSS 
+**********************************************
+ */
+.our_services {
+    padding: 60px 0;
+    position: relative;
+}
+
+.our_services::after {
+    content: "";
+    background: var(--secondary);
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: polygon(100% -370%, 0% 100%, 100% 100%);
+}
+
+.service_items {
+    height: 420px;
+}
+
+.service_items .figure {
+    position: relative;
+    margin-bottom: 0;
+    z-index: 1;
+    height: 100%;
+}
+
+.service_items .figure::after {
+    content: "";
+    background: linear-gradient(45deg, black, transparent);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.figure-img {
+    margin-bottom: 0;
+}
+
+.service_items .figure .figure-caption {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 25px;
+    left: 12px;
+    color: #fff;
+    z-index: 5;
+}
+
+.service_items .figure .figure-caption h4 {
+    font-size: 25px;
+    min-height: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.service_items .figure .figure-caption .custom_btn a span {
+    color: var(--bs-white);
+}
+
+.service_items .figure .figure-caption .custom_btn a .icon {
+    background: var(--bs-white);
+    color: var(--dark);
+}
+
+
+
+/* 
+***********************************************
+Our Products CSS 
+***********************************************
+*/
+
+.our_products {
+    padding: 60px 0;
+    background: var(--gray);
+    position: relative;
+    z-index: 2;
+}
+
+.our_products::after {
+    content: "";
+    background: url(../images/pattern.png) center no-repeat;
+    width: 100%;
+    height: 880px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: top center;
+}
+
+.products_item {
+    box-shadow: 0 0px 14px rgba(0, 0, 0, .1);
+}
+
+.product_img {
+    width: 100%;
+    height: 160px;
+}
+
+.product_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.products_item .card .product_info {
+    padding: 20px;
+}
+
+.products_item .card .product_info h6 {
+    color: var(--dark);
+    font-size: 12px;
+    min-height: 40px;
+    line-height: 20px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+/*
+**************************************************
+Our Profile CSS
+**************************************************
+ */
+.our_profile {
+    background: var(--bs-white);
+    position: relative;
+    padding: 100px 0;
+    z-index: 5;
+}
+
+.our_profile::after {
+    content: "";
+    width: 25%;
+    height: 100%;
+    background: var(--secondary);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.profile_tabs {
+    padding: 0 50px 50px;
+}
+
+.profile_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile_img {
+    padding: 30px;
+}
+
+.profile_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+*-*****************************************
+Testimonials CSS
+*-*****************************************
+ */
+
+.testimonials {
+    padding: 100px 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../images/Banner01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.testimonials .sub_heading span {
+    color: #fff;
+}
+
+.tesimonial_item h5 {
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 80%;
+    line-height: 37px;
+    color: var(--bs-white);
+    position: relative;
+    padding-left: 50px;
+    text-align: justify;
+}
+
+.tesimonial_item h5::before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    position: absolute;
+    top: -6px;
+    left: 3px;
+    font-size: 40px;
+    color: var(--secondary);
+}
+
+.tesimonial_item h5::after {
+    content: "\f10e";
+    font-family: 'Fontawesome';
+    position: absolute;
+    bottom: -9px;
+    right: 0;
+    font-size: 40px;
+    color: var(--secondary);
+}
+
+.testimonials_slider .owl-dots {
+    gap: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 80px;
+    display: grid;
+}
+
+.testimonials_slider .owl-dots .owl-dot {
+    background: var(--bs-white) !important;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: relative;
+    transition: .3s;
+}
+
+.testimonials_slider .owl-dots .owl-dot.active {
+    background: var(--secondary) !important;
+}
+
+.testimonials_slider .owl-dots .owl-dot::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--secondary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+}
+
+.testimonials_slider .owl-dots .owl-dot.active::before {
+    opacity: 1;
+}
+
+.testimonial_qote {
+    background: var(--secondary);
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    left: 40px;
+}
+
+.qute_icon {
+    position: absolute;
+    left: -18px;
+}
+
+.qute_icon i {
+    font-size: 65px;
+    color: #fff;
+}
+
+/*
+*-*****************************************
+Faq CSS
+*-*****************************************
+ */
+.faq_section {
+    background: var(--gray);
+    padding: 120px 0 160px;
+    position: relative;
+    z-index: 2;
+}
+
+.faq_section::before {
+    content: "";
+    background: url(../images/pngwing.png) center no-repeat;
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+}
+
+.faq_section::after {
+    content: "";
+    background: var(--secondary);
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.faq_wrapper {
+    position: relative;
+}
+
+.faq_img {
+    width: 50%;
+}
+
+.faq_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faq_info {
+    padding: 50px 50px 200px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.faq_section .accordion-item {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    margin: 10px 0;
+}
+
+.faq_section .accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
+}
+
+.faq_section .accordion-button:focus {
+    box-shadow: none !important;
+    border-color: var(--secondary);
+}
+
+.faq_section .accordion-body ul {
+    display: grid;
+    gap: 10px;
+}
+
+.faq_section .accordion-body ul li {
+    color: var(--dark);
+    font-weight: 200;
+    font-size: 15px;
+}
+
+/*
+*-*****************************************
+Business Associated wrapper CSS
+*-*****************************************
+ */
+.business_associated {
+    background: linear-gradient(to left, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../images/video-bg.jpg) center no-repeat;
+    padding: 120px 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.associated_items {
+    position: relative;
+    padding: 30px 30px 30px 100px;
+    border-radius: 5px;
+    z-index: 2;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: 1px;
+    min-height: 435px;
+}
+
+.associated_items::after {
+    content: "";
+    background: rgb(255 255 255);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.associated_logo {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.associated_logo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.associated_logo::after {
+    content: "";
+    background: #7a7878;
+    width: 62px;
+    height: 35px;
+    position: absolute;
+    top: -35px;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+    left: -2px;
+}
+
+.associated_info h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+
+.associated_info ul {
+    display: grid;
+    gap: 15px;
+}
+
+.associated_info ul li {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.associated_info ul li i {
+    color: var(--secondary);
+}
+
+.associated_info ul li span {
+    font-size: 12px;
+}
+
+/*
+*-*****************************************
+Our Clients CSS
+*-*****************************************
+ */
+
+.our_client {
+    position: relative;
+    padding: 50px 0;
+    background: var(--gray)
+}
+
+/* .our_client::before {
+    content: "";
+    width: 30%;
+    height: 100%;
+    background: #f8f8f8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+.client_item {
+    width: 100%;
+    height: 85px;
+    background: var(--bs-white);
+}
+
+.client_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+/*
+*-*****************************************
+
+Breadcrumb CSS
+*-*****************************************
+ */
+.header-fixed {
+    position: unset;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+    height: 350px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb::after {
+    content: "";
+    background: linear-gradient(to left, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.breadcrumb_title h2 {
+    color: var(--bs-white);
+    font-size: 42px;
+    margin: 50px 0 20px;
+}
+
+
+.breadcrumb_list ul {
+    display: flex;
+    gap: 15px;
+}
+
+.breadcrumb_list ul li {
+    color: rgba(255, 255, 255, .9);
+}
+
+.breadcrumb_list ul li a {
+    font-size: 13px;
+    color: var(--bs-white);
+}
+
+.breadcrumb_list ul li a.active {
+    color: var(--secondary);
+}
+
+
+
+
+
+
+/*
+*-*****************************************
+About us Page CSS
+*-*****************************************
+ */
+.heading_holder h2 {
+    color: var(--secondary);
+
+}
+
+.about_wrapper {
+    position: relative;
+    padding: 60px 0;
+    background: var(--gray);
+}
+
+.about_wrapper .row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.about_content {
+    padding: 30px;
+    text-align: justify;
+    background: #fff;
+    height: 100%;
+}
+
+
+.about_wrapper .about_img {
+    width: 100%;
+    height: 405px;
+}
+
+.about_wrapper .about_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about_content p {
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.about_content p:last-child {
+    margin-bottom: 0;
+}
+
+
+.mission_state_area {
+    padding: 60px 0;
+}
+
+.directior_area {
+    padding: 60px 0;
+    background: var(--gray);
+}
+
+.direct_wrap {
+    display: grid;
+    gap: 50px;
+}
+
+.d_item {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 10px;
+    position: relative;
+    padding: 20px;
+    z-index: 3;
+}
+
+.direct_img {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.d_item::after {
+    content: "";
+    width: 90%;
+    height: 100%;
+    border: 2px solid #e5e5e5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    z-index: -1;
+    background: #fff;
+}
+
+.direct_img_area {
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+.direct_content span {
+    color: var(--secondary);
+    padding: 8px 0;
+    display: block;
+}
+
+.mission_state_area .heading_holder {
+    margin-bottom: 120px;
+}
+
+.mission_content ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.mission_content ul li {
+    flex: 1;
+    padding: 70px 30px 30px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+    background: oldlace;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(231 231 231);
+}
+
+.mission_content ul li .icon {
+    width: 120px;
+    height: 120px;
+    background: bisque;
+    padding: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mission_content ul li h4 span {
+    color: var(--secondary);
+}
+
+.mission_content ul li .icon img {
+    width: 100%;
+}
+
+.mission_content ul li p {
+    margin-bottom: 0;
+    font-size: 13px;
+    text-align: justify;
+    min-height: 240px;
+}
+
+
+
+
+/* 
+***************************************************
+Industry Automation Page CSS
+***************************************************
+*/
+.automation_service_area {
+    padding: 60px 0;
+    position: relative;
+}
+
+.industrial_shape_img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.middle_img {
+    position: relative;
+}
+
+.middle_img::after {
+    content: "";
+    background: var(--secondary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: -1;
+}
+
+.automation_service_area .accordion-item ul li {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: var(--secondary);
+    outline: 0;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fa5e07;
+    background-color: #fa5e071a;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+}
+
+.middle_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(65%) saturate(1923%) hue-rotate(354deg) brightness(95%) contrast(106%);
+}
+
+.accordion-body {
+    padding: 1rem 1.25rem;
+    background: #f5f5f5;
+}
+
+.accordion-body ul li i,
+.accordion-body ul li p strong {
+    color: var(--secondary);
+}
+
+.automation_icon {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    bottom: 0;
+}
+
+.automation_icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(65%) saturate(1923%) hue-rotate(354deg) brightness(95%) contrast(106%);
+}
+
+.middle_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+****************************************************
+EPC Page CSS 
+****************************************************
+ */
+.epc_shape_img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: end;
+}
+
+.epc_shape_img img {
+    width: 50%;
+}
+
+/*
+****************************************************
+Solar Solution Page CSS 
+****************************************************
+ */
+.solar_solution_area {
+    padding: 60px 0;
+    position: relative;
+}
+
+.solar_shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.solar_shape img {
+    filter: opacity(.2);
+}
+
+.solar_content ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.solar_content ul li i {
+    color: var(--secondary);
+}
+
+.solar_content ul li p {
+    margin-bottom: 0;
+}
+
+.solar_img {
+    padding-right: 60px;
+    position: relative;
+    z-index: 3;
+}
+
+.solar_img::after {
+    content: "";
+    background: var(--secondary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 44px;
+    left: -80px;
+    clip-path: polygon(0 0, 75% 0, 100% 38%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%);
+    z-index: -1;
+}
+
+/*
+*-*****************************************
+Contact Area CSS
+*-*****************************************
+ */
+
+.contact_map_area {
+    position: relative;
+}
+
+.contact_map_area iframe {
+    display: block;
+}
+
+.contact_from_area {
+    padding: 60px 0;
+    position: relative;
+}
+
+.contact_from_area::after {
+    content: "";
+    background: var(--secondary);
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.contact_form>span {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.contact_form {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+    padding: 30px;
+    background: var(--bs-white);
+}
+
+.contact_form .input_group label span {
+    color: red;
+}
+
+.contact_address {
+    background: var(--dark);
+    padding: 30px;
+    color: #fff;
+    height: 100%;
+}
+
+.contact_address ul {
+    display: grid;
+    gap: 15px;
+}
+
+
+.contact_address ul li span {
+    display: block;
+}
+
+.contact_address ul li p,
+.contact_address ul li a {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+/*
+*-*****************************************
+Career CSS
+*-*****************************************
+ */
+.career_content h4 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.career_content h4 strong {
+    color: var(--secondary);
+}
+
+.job_filter_area {
+    background: #fff7f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.job_filter_check {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px;
+    background: #ffeee5;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.job_filter_check label.form-check-label {
+    font-size: 12px;
+}
+
+
+
+.accordion-button {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.heading_holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.heading_holder img {
+    width: 70px;
+    background: #f9f7f7;
+    padding: 10px;
+}
+
+
+
+
+/*
+*-*****************************************
+Footer CSS
+*-*****************************************
+ */
+.footer {
+    background: var(--dark);
+    padding: 80px 0;
+}
+
+.footer_item h3 {
+    font-size: 22px;
+    color: var(--secondary);
+    margin-bottom: 30px;
+}
+
+.footer_item ul li a {
+    color: var(--bs-white);
+    font-size: 13px;
+    padding: 10px 0;
+    display: block;
+}
+
+.footer_item span {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.footer_item p,
+.footer_item p a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer_social ul {
+    display: flex;
+    gap: 30px;
+}
+
+
+.footer_social ul li a {
+    font-size: 18px;
+}
+
+/*
+*************************************************
+Copyright CSS
+*************************************************
+ */
+.copyright {
+    padding: 10px 0;
+    text-align: center;
+    background: #090a0a;
+    color: #fff;
+}
+
+.copyright p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.copyright p a {
+    color: var(--secondary);
+}

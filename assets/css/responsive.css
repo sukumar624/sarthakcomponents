@@ -1,0 +1,243 @@
+@media (min-width: 1200px) and (max-width: 2099.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .sub_heading span {
+        font-size: 30px;
+    }
+
+    .sub_heading h2 {
+        font-size: 24px;
+    }
+
+    .associated_items {
+        margin-right: 2px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .sub_heading span {
+        font-size: 30px;
+    }
+
+    .sub_heading h2 {
+        font-size: 24px;
+    }
+
+    .associated_items {
+        margin-right: 2px;
+    }
+
+    .profile_tabs {
+        padding: 30px 10px;
+    }
+
+    .tesimonial_item h5 {
+        padding-top: 60px;
+        font-size: 18px;
+        max-width: 100%;
+        padding-left: 0;
+        text-align: justify;
+        line-height: 25px;
+    }
+
+    .testimonials_slider .owl-dots {
+        top: inherit;
+        transform: inherit;
+        right: 80px;
+        display: flex;
+        bottom: -19px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+@media (max-width: 575.98px) {
+    .header {
+        position: sticky;
+        background: rgba(255, 255, 255);
+    }
+
+    .header .navbar-nav {
+        padding-top: 20px;
+    }
+
+    .header .nav-item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .header .nav-item .nav-link {
+        padding: 5px 0;
+    }
+
+    .hero_section {
+        height: calc(100vh - 117px);
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .sub_heading span {
+        font-size: 30px;
+    }
+
+    .banner_footer {
+        flex-wrap: wrap;
+    }
+
+    .about_wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .our_services::after {
+        width: 60%;
+        height: 20%;
+        bottom: 0;
+        top: auto;
+    }
+
+    .our_profile {
+        padding: 60px 0;
+    }
+
+    .our_profile::after {
+        width: 25%;
+        height: 33%;
+        top: auto;
+        bottom: 0;
+    }
+
+    .profile_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile_tabs {
+        padding: 0 30px;
+    }
+
+    .testimonials {
+        padding: 60px 0;
+    }
+
+    .associated_items {
+        padding: 30px;
+        max-width: 100%;
+        margin-left: auto;
+    }
+
+    .associated_logo {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        width: 150px;
+        margin-bottom: 12px;
+    }
+
+    .associated_logo::after {
+        display: none;
+    }
+
+    .tesimonial_item h5 {
+        font-size: 13px;
+        max-width: 100%;
+        line-height: 27px;
+        padding: 50px 0;
+    }
+
+
+
+    .faq_img {
+        width: 100%;
+    }
+
+    .faq_info {
+        padding: 30px;
+        width: 100%;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    .faq_section::after {
+        width: 20%;
+        height: 30%;
+        top: auto;
+        bottom: 0;
+    }
+
+
+    .testimonials_slider .owl-dots {
+        gap: 30px;
+        position: absolute;
+        top: auto;
+        transform: none;
+        right: 80px;
+        display: flex;
+        bottom: -20px;
+    }
+
+    .breadcrumb {
+        height: 250px;
+    }
+
+    .breadcrumb_title h2 {
+        margin: 0;
+    }
+
+    .about_wrapper .about_img {
+        height: 235px;
+    }
+
+    .mission_content ul {
+        gap: 90px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .mission_content ul li {
+        flex: 100%;
+        padding: 70px 30px 30px;
+    }
+
+    .d_item {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        position: relative;
+        padding: 20px;
+        z-index: 3;
+    }
+
+    .d_item::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+    }
+
+    .job_filter_form .input_group {
+        margin: 10px 0;
+    }
+
+    .job_filter_check {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .contact_form {
+        margin-bottom: 30px;
+    }
+
+    .copyright p {
+        font-size: 10px;
+        text-align: center;
+        text-align: left;
+    }
+
+    .our_profile .dot {
+        display: none;
+    }
+}
